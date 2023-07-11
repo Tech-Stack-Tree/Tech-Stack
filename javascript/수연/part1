@@ -10,7 +10,8 @@ ex) var name = "Peter"
 /* */ : 블록 단위 주석 처리
 
 3. 자료형, 타입(type)
-``` js
+
+``` javaScript
 var x = 5; //숫자형(number)
 var y = 'five'; //문자형(String)
 var isTrue = true; //불린형(Boolean)
@@ -30,3 +31,4 @@ var addFruits = function(fruit) {
 addFruit('watermelon');
 console.log(fruits);
 ```
+
