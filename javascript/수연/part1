@@ -11,7 +11,7 @@ ex) var name = "Peter"
 
 3. 자료형, 타입(type)
 
-``` javaScript
+```
 var x = 5; //숫자형(number)
 var y = 'five'; //문자형(String)
 var isTrue = true; //불린형(Boolean)
