@@ -57,3 +57,79 @@ Key값을 해싱 과정을 통해 **해시 값(hash value) 또는 해시 코드(
 ### References
 
 [https://velog.io/@hanif/자료구조-해시](https://velog.io/@hanif/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0-%ED%95%B4%EC%8B%9C)
+
+## 📖프로그래머스 문제 level1 ##
+
+🏃🏻‍♀️**완주하지 못한 선수**
+
+해시를 사용하지 않고 간단하게 배열로 풀 수 있다.
+
+```java
+import java.util.*;
+class Solution {
+    public String solution(String[] participant, String[] completion) {
+    //간단하게 배열로 풀 수 있음
+    Arrays.sort(participant);
+    Arrays.sort(completion);
+    
+    for(int i=0; i<completion.length; i++) {
+        if(participant[i].equals(completion[i])) {
+            continue;
+        }else {
+            return participant[i];
+        }
+    }
+        
+return participant[participant.length-1];
+    }
+}
+```
+
+→ participant[i]랑 completion[i] 같은지 확인해서 같으면 continue(넘어감)
+
+안같으면 participant[i] return 한다.
+
+완주자 목록에 다른게 없다면 마지막 한 사람이므로 그 사람을 출력한다.
+
+### Hash를 사용한다면?
+
+```java
+import java.util.HashMap;
+
+class Solution {
+    public String solution(String[] participant, String[] completion) {
+        String answer ="";
+        HashMap<String, Integer> hm = new HashMap<>();
+        for(String player : participant) hm.put(player, hm.getOrDefault(player, 0) + 1);
+        for(String player : completion) hm.put(player, hm.get(player) -1);
+        for(String key : hm.keySet()) {
+        	if(hm.get(key) != 0) {
+        		answer = key;
+        		System.out.println(answer);
+        		break;
+        	}
+        }
+        return answer;
+    }
+}
+```
+
+HashMap에 Participant의 참가자를 key 값으로, value는 +1을 넣어준다.
+
+그리고 이 해시 맵을 이용 하여 Completion의 명단이 HashMap에 key 값에 존재하면 value에 -1 해 준다. 그러면 각 key값의 value값이 0이 아닌 경우 완주하지 못한 명단을 구할 수 있다.
+
+**getOrDefault()란?**
+
+`getOrDefault`는 자바의 `Map` 인터페이스에서 제공하는 메소드이다.
+
+`Map`은 Key-Value 쌍으로 데이터를 저장하는 자료구조입니다. `getOrDefault` 메소드는 맵에서 주어진 키에 해당하는 값이 있으면 그 값을 반환하고, 그렇지 않으면 기본값을 반환
+
+예를 들어, `Map<String, Integer> map = new HashMap<>()`이라는 맵이 있을 때, `map.getOrDefault("apple", 0)`을 호출하면, "apple"이라는 키에 해당하는 값이 없으면 0을 반환
+
+이 메소드는 `NullPointerException`을 방지하기 위해 유용하게 사용될 수 있다.
+
+ 예를 들어, `Map`에서 특정 키에 대한 값을 가져올 때, 해당 키가 없으면 `null`이 반환되는데, 이 때 `getOrDefault`를 사용하면 `null` 대신 기본값을 반환할 수 있다.
+
+### references
+
+[https://junghn.tistory.com/entry/알고리즘-프로그래머스-완주하지-못한-선수-해시-1](https://junghn.tistory.com/entry/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%EC%99%84%EC%A3%BC%ED%95%98%EC%A7%80-%EB%AA%BB%ED%95%9C-%EC%84%A0%EC%88%98-%ED%95%B4%EC%8B%9C-1)
