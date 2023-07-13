@@ -7,7 +7,7 @@
 
 ## 목차
  ### ✍JAVA
-  - [JVM 구조](https://github.com/Tech-Stack-Tree/Tech-Stack/blob/main/Computer_Science/Java/현보영/JVM&메모리구조.md)
+  - JVM 구조
   - Garbage collection
   - 문자열 클래스
   - Call by Value & Call by Reference 차이
