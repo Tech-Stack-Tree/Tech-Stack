@@ -10,6 +10,10 @@
   - JVM 구조
   - Garbage collection
   - 문자열 클래스
+  - Call by Value & Call by Reference 차이
+  - Mutable 객체와 Immutable 객체 차이
+  - 제네릭
+  - Error&Exception
 
 ## 👩‍💼👩‍💻스터디원 소개
 
