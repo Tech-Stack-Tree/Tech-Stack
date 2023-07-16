@@ -7,13 +7,13 @@
 
 ## 목차
  ### ✍JAVA
-  - [JVM 구조](../JAVA_승현/)
+  - [JVM 구조](../Computer_Science/Java/현보영/JVM&메모리구조.md)
   - [Garbage collection](../Computer_Science/JAVA_승현/GC.md)
-  - 문자열 클래스
-  - Call by Value & Call by Reference 차이
+  - [문자열 클래스](../Computer_Science/JAVA_승현/문자열클래스.md)
+  - [Call by Value & Call by Reference](../Computer_Science/Java/CallByValue&CallbyReference.md)
   - Mutable 객체와 Immutable 객체 차이
   - 제네릭
-  - Error&Exception
+  - [Error&Exception](../Computer_Science/Java/수연/Error&Exception.md)
 
 ## 👩‍💼👩‍💻스터디원 소개
 
