@@ -32,7 +32,7 @@ OutOfMemoryError - 새는 메모리를 차단, heap의 크기를 늘려주는 �
   
 ![Exception](img/exception.gif)   
   
-##### Exception 종류  
+#### Exception 종류  
 **1. Checked Exception**  
 - 예외처리가 필수이며, 처리하지 않으면 컴파일되지 않는다.  
 - *try-catch로 감싸거나 throw로 던져서 예외처리.*  
@@ -62,7 +62,7 @@ ex)
     
 => 응용 프로그램의 로직이 진행되다가 개발자가 임의로 예외를 던질 수 있다는 의미 => 예외 처리를 개발자가 할 수 있음  
    
-##### Exception Handling
+#### Exception Handling
 Java에서 모든 예외가 발생하면 (XXX)Exception 객체를 생성한다.  
 예외를 처리하는 방법에는 크게 2가지가 있다.  
 1. 직접 try-catch를 이용해서 예외에 대한 최종적인 책임을 지고 처리하는 방식  
@@ -70,5 +70,5 @@ Java에서 모든 예외가 발생하면 (XXX)Exception 객체를 생성한다.
 다른 메서드의 일부분으로 동작하는 경우엔 던지는 것을 추천.  
   
   
-##### ✔️ Reference
+### ✔️ Reference
 <https://docstore.mik.ua/orelly/java/langref/ch09_04.htm>
