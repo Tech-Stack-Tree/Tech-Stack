@@ -7,7 +7,7 @@ getMessage()와 printStackTrace()라는 메서드로 구현됨
 ![throwable](img/img.png) 
 
 
-##### ✏️ Error
+### ✏️ Error
 : 시스템이 종료되어야 할 수준의 상황과 같이 수습할 수 없는 심각한 문제, **개발자가 미리 예측하여 방지할 수 없음.** 
 
 ![Error](img/error.gif)  
@@ -27,20 +27,20 @@ OutOfMemoryError - 새는 메모리를 차단, heap의 크기를 늘려주는 �
 
 
 
-##### ✏️ Exception  
+### ✏️ Exception  
 : 개발자가 구현한 로직에서 발생한 실수나 사용자의 영향에 의해 발생, 오류와 달리 **개발자가 미리 예측하여 방지할 수 있기**에 상황에 맞는 예외처리(Exception Handle)를 해야 한다.   
   
 ![Exception](img/exception.gif)   
   
-**Exception 종류**  
-1. Checked Exception  
+##### Exception 종류  
+**1. Checked Exception**  
 - 예외처리가 필수이며, 처리하지 않으면 컴파일되지 않는다.  
 - *try-catch로 감싸거나 throw로 던져서 예외처리.*  
 - 컴파일 단계에서 명확하게 Exception체크가 가능하다. *Runtime Exception*  
 - 예외 발생시 트랜잭션을 roll-back 하지 않고 예외를 던져준다.  
 - JVM 외부와 통신(네트워크, 파일시스템 등)할 때 주로 쓰인다.  
   
-2. UncheckedException  
+**2. UncheckedException**  
 - RuntimeException 하위의 모든 예외  
 - NullPointerException, IndexOutOfBoundException 등등  
 - 실행과정 중 어떠한 특정 논리에 의해 발견되는 Exception  
@@ -62,7 +62,7 @@ ex)
     
 => 응용 프로그램의 로직이 진행되다가 개발자가 임의로 예외를 던질 수 있다는 의미 => 예외 처리를 개발자가 할 수 있음  
    
-**Exception Handling**  
+##### Exception Handling
 Java에서 모든 예외가 발생하면 (XXX)Exception 객체를 생성한다.  
 예외를 처리하는 방법에는 크게 2가지가 있다.  
 1. 직접 try-catch를 이용해서 예외에 대한 최종적인 책임을 지고 처리하는 방식  
