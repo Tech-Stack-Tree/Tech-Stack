@@ -7,8 +7,8 @@
 
 ## 목차
  ### ✍JAVA
-  - JVM 구조
-  - Garbage collection
+  -[JVM 구조](../JAVA_승현/)
+  - [Garbage collection](../JAVA_승현/GC.md)
   - 문자열 클래스
   - Call by Value & Call by Reference 차이
   - Mutable 객체와 Immutable 객체 차이
