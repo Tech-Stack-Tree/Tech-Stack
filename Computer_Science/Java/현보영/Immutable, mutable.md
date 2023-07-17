@@ -28,11 +28,10 @@
 ```
 2. setter 메서드를 구현해야함
 3. class를 상속하지 못하도록 선언
-## Mutable Object 객체
 
 <br/>
 
-## Mutable Object
+## Mutable Object 객체
 - 가변 객체
 - heap영역에 생선된 객체 변경 가능
 - List, ArrayList, HashMap,StringBuilder,StringBuffer
