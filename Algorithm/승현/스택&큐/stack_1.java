@@ -1,3 +1,5 @@
+//같은 숫자는 싫어!(level1)
+
 import java.util.*;
 
 public class Solution {
