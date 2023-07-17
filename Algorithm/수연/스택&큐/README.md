@@ -1,5 +1,5 @@
 # 🔍 스택(Stack)&큐(Queue)
-![스택&큐](img/스택큐.PNG)  
+![스택&큐](../img/스택큐.PNG)  
 
 
 ### 🧪 스택(Stack)
@@ -74,7 +74,7 @@ while(!que.isEmpty()){
 *****
 ### 💡 덱(Deque, Double-Ended Queue)
 : Queue의 변형으로, 양쪽 끝에 추가/삭제가 가능하며 Deque의 조상은 Queue이다. 
-![스택&큐](img/디큐.PNG)  
+![스택&큐](../img/디큐.PNG)  
 
 
 
