@@ -8,7 +8,8 @@
  ### Part 1
   - 조건문 if / else if / switch
   - 반복문 for / for in / while 
-
+ ### Part 2
+  - 연산자 
 ## 👩‍💼👩‍💻스터디원 소개
 
 |[![](https://github.com/BoyoungHyeon.png?width=200px)](https://github.com/BoyoungHyeon)|[![](https://github.com/suyeonChoi7807.png?width=200px)](https://github.com/suyeonChoi7807) |[![](https://github.com/kaily22.png?width=200px)](https://github.com/kaily22) | [![](https://github.com/crunky78.png?width=200px)](https://github.com/crunky78)|
