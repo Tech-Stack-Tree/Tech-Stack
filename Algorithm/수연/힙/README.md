@@ -162,13 +162,13 @@ HashSet: 단 하나의 NULL 값을 가질 수 있다.
 HashMap: put() 메서드를 사용, Key-Value 쌍으로 저장하기 때문에 삽입 연산 동안 단 하나의 객체가 생성된다.  
 HashSet: add() 메서드를 사용, 객체 그 자체를 저장하고 내부적으로 HashMap을 사용하기 때문에 삽입되는 객체(Key값)와 dummy 객체(Value 값), 총 두 개의 객체가 삽입 연산 동안 생성된다.  
 
-**성능**
+**성능**  
 HashMap이 HashSet보다 빠르다.  
 -> 데이터의 유일함(Uniqueness)을 유지하기 위해 항상 HashMap이 HashSet보다 선호된다.  
 
   
 *****
 ### ✅ Reference
-[HashMap]<https://kadosholy.tistory.com/120>
-[HashSet]<https://velog.io/@acacia__u/hashSet>
+![HashMap]<https://kadosholy.tistory.com/120>
+![HashSet]<https://velog.io/@acacia__u/hashSet>
 
