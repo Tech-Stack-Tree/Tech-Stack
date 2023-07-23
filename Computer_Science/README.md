@@ -15,9 +15,9 @@
   - [제네릭](https://github.com/Tech-Stack-Tree/Tech-Stack/blob/main/Computer_Science/Java/%ED%98%84%ED%99%94/2%EC%A3%BC%EC%B0%A8.md)
   - [Error&Exception](../Computer_Science/Java/수연/Error&Exception.md)
   - 비동기처리 문법 비교
-  - Java Lamda Expression
+  - [Java Lamda Expression](../Computer_Science/Java/현화/3주차.md)
   - [Java8 Stream](../Computer_Science/Java/수연/자바스트림(stream).md)
-  - Collection Framework(List, Map,Set등)
+  - [Collection Framework(List, Map,Set등)](../Computer_Science/JAVA_승현/Collection_Framework.md)
  ### 🍀Spring
 
 ## 👩‍💼👩‍💻스터디원 소개
