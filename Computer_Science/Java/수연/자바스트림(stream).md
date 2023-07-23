@@ -80,7 +80,7 @@ Stream<String> stream = Stream.iterate(100, n -> n + 10).limit(5);
 ```
 
 1-6. Empty 스트림  
-:늑수한 스트림, '빈 스트림(Empty Stream)'을 사용할 수 있다.   
+:특수한 스트림, '빈 스트림(Empty Stream)'을 사용할 수 있다.   
 stream 객체를 참조하는 변수가 null이라면 NullPointExceiption이 발생할 수 있다.  
 ``` java
 Stream<String> stream = Stream.empty();
