@@ -16,7 +16,7 @@
   - [Error&Exception](../Computer_Science/Java/수연/Error&Exception.md)
   - 비동기처리 문법 비교
   - Java Lamda Expression
-  - Java8 Stream
+  - [Java8 Stream](../Computer_Science/Java/수연/자바스트림(stream).md)
   - Collection Framework(List, Map,Set등)
  ### 🍀Spring
 
