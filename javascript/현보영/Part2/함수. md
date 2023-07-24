@@ -1,0 +1,30 @@
+
+
+### 함수 형식
+- 함수 표현식과 함수 선언문
+```js
+function 함수 이름 (매개변수 목록) {
+  함수 실행부
+}
+```
+
+### 예외처리
+1. throw 문
+- 개발자가 의도한 에러
+2. try-catch-finally
+- 개발자가 예상치 못한 에러
+```js
+function checkNumber(val){
+    if (typeof val !== 'number') throw '유효하지 않은 값입니다.';
+    console.log('숫자형 값으로 확인되었습니다.');
+}
+
+try {
+    checkNumber(100);
+    checkNumber('Wrong type');
+} catch(e) {
+    console.log('에러가 발생했습니다 >>> ${e}');
+} finally {
+    console.log('완료');
+}
+```
