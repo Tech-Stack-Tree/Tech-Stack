@@ -164,3 +164,82 @@ try{
 
 }
 ```
+
+### 7. arguments 객체 이해하기  
+전달인자(argument): 자바스크립트 함수에서의 매개변수로, 함수가 호출될 때 전달되는 값(함수 선언 시 작성되지 않는다.)  
+``` js
+function sum(){
+    var total = 0;
+    for(var i=0; i<arguments.length; i++){
+        total += arguments[i];
+    }
+    console.log(arguments instanceof Array);  //false -> argument 객체는 배열이 아니다.
+    return total;
+}
+
+var sumOf1to3 = sum(1,2,3);
+console.log(sumOf1to3);    //6
+
+function testArg(){
+    var newArr = Array.prototype.slice.call(arguments);    //배열로 변경
+    console.log(newArr);                    //["a","b"]
+    console.log(newArr.indexOf('b'));       //1
+    console.log(arguments.indexOf('b'));    //TypeError
+}
+
+testArg('a', 'b');
+```
+  
+### 8. 함수 기본 매개변수 처리하기  
+*기본 매개변수*: 매개변수를 정의할 때 기본으로 할당될 인자값과 함께 작성하는 매개변수  
+값을 할당하는 연산자인 '='를 사용하여 정의  
+  
+``` js
+function drawChart(width=200, height=400){
+    console.log(`${width} X ${height} 차트를 그립니다.`);
+}
+drawChart(100);     //100 X 400 차트를 그립니다.
+drawChart();        //200 X 400 차트를 그립니다.
+
+function drawChart2(width=200, height=width/2){
+    console.log(`${width} X ${height} 차트를 그립니다.`);
+}
+drawChart2(300);    //300 X 150 차트를 그립니다.
+drawChart2();       //200 X 100 차트를 그립니다.
+```
+
+### 9. 함수 나머지 매개변수 이해하기
+*나머지 매개변수*: 매개변수를 정의할 때 정해지지 않은 매개변수들을 정의할 수 있게 한다.  
+- arguements객체와 유사하나, argument객체는 함수에 전달되는 모든 전달인자를 포함  
+- but, 나머지 매개변수는 정해지지않은 나머지를 의미
+- 매개변수 작성하는 곳에서 작성하고, 다른 매개 변수와의 차이점을 두기 위해 ... 연산자와 함께 작성
+
+``` js
+function(parameter, ....restParameter){
+  //arguments 객체는 나머지 매개변수와 다르게 함수 몸통에서만 사용한다.
+```
+  
+``` js
+function sum(...args){
+    var total = 0;
+    for(var i=0; i<args.length; i++){
+        total += args[i];
+    }
+    console.log(args.indexOf(1));  //0 -> 값 1이 들어있는 index는 0
+    return total;
+}
+console.log(sum(1,2,3));           //6
+
+function sum2(a, b, ...others){
+    var total = a+b;
+
+    for(var i=0; i<others.length; i++){
+        total += others[i];
+    }
+
+    return total;
+}
+
+console.log(sum2(1,2));             //3
+console.log(sum2(1,2,3,4));         //10
+```
