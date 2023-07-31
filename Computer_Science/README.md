@@ -20,8 +20,8 @@
   - [Collection Framework(List, Map,Set등)](../Computer_Science/JAVA_승현/Collection_Framework.md)
  ### 🍀Spring
   - 웹 어플리케이션의 이해
-  - 서블릿
-  - JSP
+  - [서블릿](../Computer_Science/Java/현화4주차(서블릿).md)
+  - [JSP](../Computer_Science/JAVA_승현/JSP.md)
   - MVC패턴
 
 ## 👩‍💼👩‍💻스터디원 소개
