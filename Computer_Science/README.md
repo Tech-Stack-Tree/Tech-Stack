@@ -23,6 +23,10 @@
   - [서블릿](../Computer_Science/Java/현화/4주차(서블릿).md)
   - [JSP](../Computer_Science/JAVA_승현/JSP.md)
   - MVC패턴
+  - Application Context
+  - PSA, IoC, AOP, POJO
+  - Bean(Scope)
+  - 
 
 ## 👩‍💼👩‍💻스터디원 소개
 
