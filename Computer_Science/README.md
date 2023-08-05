@@ -24,9 +24,9 @@
   - [JSP](../Computer_Science/JAVA_승현/JSP.md)
   - MVC패턴
   - Application Context
-  - PSA, IoC, AOP, POJO
+  - [PSA, IoC, AOP, POJO](../Computer_Science/JAVA_승현/POJO.md)
   - Bean(Scope)
-  - 
+    
 
 ## 👩‍💼👩‍💻스터디원 소개
 
