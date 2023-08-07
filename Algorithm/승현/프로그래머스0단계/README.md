@@ -195,7 +195,7 @@ class Solution {
 
 **→Arrays.copyOfRange() 사용해서 쉽게 풀 수 있다.**
 
-1. **점의 위치 구하기**
+ **9.점의 위치 구하기**
 
 ```java
 class Solution {
@@ -219,8 +219,7 @@ answer = 3;
     }
 }
 ```
-
-1. **피자나눠먹기(1)**
+**10. 피자나눠먹기(1)**
 
 ```java
 class Solution {
