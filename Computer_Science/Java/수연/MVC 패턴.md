@@ -12,7 +12,9 @@
 2. Controller는 사용자가 요청한 웹페이지를 서비스하기 위해서 모델을 호출 (Manipulates)  
 3. Model은 데이터베이스나 파일과 같은 데이터 소스를 제어한 후 그 결과를 Return  
 4. Controller는 Model이 리턴한 결과를 View에 반영 (Updates)  
-5. 데이터가 반영된 View는 사용자에게 보여짐 (Sees)  
+5. 데이터가 반영된 View는 사용자에게 보여짐 (Sees)
+
+![MVC](img/mvc.png)  
  
 
 ### 📲 모델 (Model)
