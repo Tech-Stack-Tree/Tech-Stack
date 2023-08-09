@@ -19,14 +19,17 @@
   - [Java8 Stream](../Computer_Science/Java/수연/자바스트림(stream).md)
   - [Collection Framework(List, Map,Set등)](../Computer_Science/JAVA_승현/Collection_Framework.md)
  ### 🍀Spring
-  - 웹 어플리케이션의 이해
+  - [웹 어플리케이션의 이해](../Computer_Science/Java/현보영/ApplicationContext.md)
   - [서블릿](../Computer_Science/Java/현화/4주차(서블릿).md)
   - [JSP](../Computer_Science/JAVA_승현/JSP.md)
-  - MVC패턴
-  - Application Context
+  - [MVC패턴](https://github.com/Tech-Stack-Tree/Tech-Stack/blob/main/Computer_Science/Java/%EC%88%98%EC%97%B0/MVC%20%ED%8C%A8%ED%84%B4.md)
+  - [Application Context](../Computer_Science/Java/현보영/웹어플리케이션.md)
   - [PSA, IoC, AOP, POJO](../Computer_Science/JAVA_승현/POJO.md)
-  - Bean(Scope)
-    
+  - [Bean(Scope)](../Computer_Science/Java/현화/5주차(Bean).md)
+  - Spring Boot vs Spring
+  - WEB MVC 요청 처리과정
+  - @Controller vs @Restcontroller
+  - spring security 개념, 인증처리과정,currentUser 정보
 
 ## 👩‍💼👩‍💻스터디원 소개
 
