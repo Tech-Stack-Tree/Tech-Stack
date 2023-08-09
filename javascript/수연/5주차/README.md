@@ -100,6 +100,7 @@ console.log(harin); //{ name: '하린', age: 10, exp: 2 }
 console.log(bbo);   //{ name: '뽀', age: 20, exp: 11 }
 ```
 
+
 ### 3. 생성자 함수 이해하기
 **생성자 함수**  
 - 자바스크립트 함수를 객체를 생성하기 위한 방법으로 사용  
@@ -143,4 +144,122 @@ console.log(jay2);  //undefined
 console.log(age);   //30
 ```
 
+
+### 4. 프로토타입 기반 상속 이해하기
+: 생성자 함수로부터 만들어진 객체는 그 생성자 함수의 프로토타입(prototype) 객체를 상속한다.  
+-> 모든 인스턴스는 해당 생성자 함수의 프로토타입 객체의 속성과 메소드 사용 가능  
+
+``` js
+//Storage 생성자 함수 정의, 내부 속성으로 dataStore를 가지고 빈 객체를 할당한다.
+function Storage() {
+    this.dataStore = {};
+}
+//Storage 생성자 함수의 프로토타입 객체에 put메소드를 추가, put메소드는 주어진 키에 해당하는 값을 dataStore속성에 할당한다.
+Storage.prototype.put = function(key, data){
+    this.dataStore[key] = data;
+}
+//Storage 생성자 함수의 프로토타입 객체에 getData메소드를 추가, 매개변수 값을 키로 dataStore속성에서 찾아 반환한다.
+Storage.prototype.getData = function(key){
+    return this.dataStore[key];
+}
+
+const productStorage = new  Storage();  //Storage 타입의 인스턴스 생성 -> put, getData 메소드 사용가능
+productStorage.put('id001', {name:'키보드', price: 2000});
+console.log(productStorage.getData('id001'));   //{name:'키보드', price: 2000}
+
+//RemovableStorage 생성자 함수 정의
+//Storage 생성자 함수가 호출되면서 RemovableStorage 생성자 함수 this에 Storage생성자 함수에서 정의한대로 dataStore가 속성으로 추가된다.
+function RemovableStorage(){
+    Storage.call(this);
+}
+
+//Object.create 메소드 : 주어진 인자를 __proto__에 연결한 새로운 객체를 반환 => 간단히 상속관계를 정의
+//Storage 함수 프로토타입 객체가 RemovableStorage 함수의 프로토타입 객체의 __proto__에 할당된다.
+RemovableStorage.prototype = Object.create(Storage.prototype);
+
+//RemovableStorage 생성자 함수의 프로토타입 객체에 removeAll 메소드를 추가한다.
+RemovableStorage.prototype.removeAll = function() {
+    this.dataStore = {}
+}
+
+const productStorage2 = new RemovableStorage(); //RemovableStorage 타입의 인스턴스 생성
+productStorage2.put('id001', {name: '키보드', price : 2000});
+productStorage2.removeAll();
+const item2 = productStorage2.getData('id001');
+console.log(item2); //undefined
+```
+
+
+### 5. 클래스 정의하기
+ES6부터 class 키워드를 통해 클래스를 정의할 수 있다.  
+**클래스** : 별도 타입의 객체를 생성하는 설계 도면  
+ex) 붕어빵 틀: 클래스/ 붕어빵: 객체  
+-> 클래스를 통해 객체가 가져야 할 상태와 행위들을 속성과 메소드로 정의할 수 있다.  
+**인스턴스** : 특정 클래스를 통해 만들어진 객체를 해당 클래스의 인스턴스라고 한다.  
+  
+``` js
+//Cart 클래스 정의 -> 클래스 이름의 첫 글자는 대문자
+class Cart {
+    //생성자 함수
+    constructor() {
+        this.store = {};
+    }
+
+    //메소드 정의
+    addProduct(product){
+        this.store[product.id] = product;
+    }
+
+    getProduct(id) {
+        return this.store[id];
+    }
+}
+
+const cart1 = new Cart();
+
+cart1.addProduct({id: 1, name:'노트북'})   
+console.log(cart1.store);   //{'1', {id: 1, name:'노트북'}}
+
+const p = cart1.getProduct(1);
+console.log(p);     //{id: 1, name:'노트북'}
+```
+
+
+### 6. 클래스 상속 이해하기
+``` js
+class Chart {
+    constructor(width, height){
+        this.width = width;
+        this.height = height;
+    }
+
+    drawLine(){
+        console.log('draw line');
+    }
+}
+
+class BarChart extends Chart {
+    constructor(width, height){
+        super(width, height);
+    }
+
+    draw() {
+        this.drawLine();
+        console.log(`draw ${this.width} X ${this.height} barChart`);
+    }
+}
+
+const barChart1 = new BarChart(100, 100);
+barChart1.draw();
+/*
+draw line
+draw 100 X 100 barChart
+*/
+```
+
+
+### 7. 클래스 정적 메소드와 속성 정의하기
+
+``` js
+```
 
