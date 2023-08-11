@@ -27,7 +27,7 @@
   - [PSA, IoC, AOP, POJO](../Computer_Science/JAVA_승현/POJO.md)
   - [Bean(Scope)](../Computer_Science/Java/현화/5주차(Bean).md)
   - Spring Boot vs Spring
-  - WEB MVC 요청 처리과정
+  - [WEB MVC 요청 처리과정](../Computer_Science/JAVA_승현/WEB_MVC요청처리과정.md)
   - @Controller vs @Restcontroller
   - spring security 개념, 인증처리과정,currentUser 정보
 
