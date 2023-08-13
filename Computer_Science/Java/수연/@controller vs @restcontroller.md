@@ -34,10 +34,10 @@ public class ReftFulController{
 6. DispatcherServlet는 View Resolver를 통해 View Name에 해당하는 View를 찾아서 Client한테 반환한다.  
   
   
-✔️ Controller가 Client 요청으로부터 Data를 반환하는 과정
-: @ResponseBody 사용
+✔️ Controller가 Client 요청으로부터 Data를 반환하는 과정  
+: @ResponseBody 사용  
 ![controller2](img/controller2.png)    
-   
+    
 [과정]  
 1. Client는 URL형식으로 요청을 보낸다.  
 2. DispatcherServlet이 요청을 위임할 Handler Mapping을 찾는다.  
