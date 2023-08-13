@@ -28,7 +28,7 @@
   - [Bean(Scope)](../Computer_Science/Java/현화/5주차(Bean).md)
   - Spring Boot vs Spring
   - [WEB MVC 요청 처리과정](../Computer_Science/JAVA_승현/WEB_MVC요청처리과정.md)
-  - [@Controller vs @Restcontroller](../Computer_Science/Java/수연/@Controller vs @Restcontroller.md)
+  - [@Controller vs @Restcontroller](../Computer_Science/Java/수연/@Controller_vs_@Restcontroller.md)
   - spring security 개념, 인증처리과정,currentUser 정보
 
 ## 👩‍💼👩‍💻스터디원 소개
