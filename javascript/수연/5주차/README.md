@@ -259,7 +259,148 @@ draw 100 X 100 barChart
 
 
 ### 7. 클래스 정적 메소드와 속성 정의하기
-
+일반적인 메소드는 해당 클래스의 인스턴스를 통해 호출한다.  
+정적 메소드는 클래스를 통해 직접 호출하는 메소드, static 키워드 사용  
+   
 ``` js
+class Product {
+    //정적메소드 build 정의
+    static build(name, price){
+        const id = Math.floor(Math.random()*1000);
+        return new Product(id, name, price);
+    }
+
+    //정적메소드 getTaxPrice 정의
+    static getTaxPrice(product){
+        return (product.price*0.1) + product.price;
+    }
+    //생성자함수 정의
+    constructor(id, name, price){
+        this.id = id;
+        this.name = name;
+        this.price = price;
+    }
+}
+
+//Product클래스를 상속하여, DeposableProduct 클래스 정의
+class DeposableProduct extends Product {
+    depose(){
+        this.deposed = true;
+    }
+}
+
+const gum = Product.build('껌', 1000);  //Product클래스의 build정적메소드를 호출
+console.log(gum);   //Product { id: 965, name: '껌', price: 1000 }
+
+const clothes = new DeposableProduct(1, '옷', 2000);    //DeposableProduct 인스턴스 생성
+const taxPrice = DeposableProduct.getTaxPrice(clothes);
+console.log(taxPrice);  //2200
 ```
 
+**정적 속성 사용하기**  
+``` js
+class ProductWithCode {
+    static get CODE_PREFIX() {
+        return "PRODUCT-"
+    }
+
+    constructor(id){
+        this.id
+        this.code = ProductWithCode.CODE_PREFIX+id;
+    }
+}
+
+const product1 = new ProductWithCode('001');
+console.log(ProductWithCode.CODE_PREFIX);   //PRODUCT-
+console.log(product1.code); //PRODUCT-001
+```
+
+
+### 8. this 이해하기
+**this**  
+: 함수가 어떻게 호출되는지에 따라 동적으로 결정된다.  
+- 주요 목적: 코드를 여러 목적으로 재사용하기 위해 존재  
+- 객체 안에 메소드로 정의 or 생성자함수로 사용 or 특정 로직을 계산하여 값을 반환하는 목적  
+  
+``` js
+//this를 전역에서 사용 -> 전역객체인 Window객체를 가리킨다.
+this.valueA = 'a';
+//console.log(valueA);      //a
+this.valueB = 'b';
+console.log(this.valueB);   //b
+
+//함수 내에서 this를 사용하고 함수를 호출하면 this는 전역 객체인 Window를 가리킨다.
+function checkThis(){
+    console.log(this);
+}
+
+//함수 내의 코드를 엄격한 모드로 실행하게 되면 this는 undefined가 된다.
+//엄격한 모드: 자바스크립트 코드를 좀 더 안전하고 엄격하게 작성하도록 돕는다. 전역이나 함수단위로 지정
+function checkThis2(){
+    "use strict"
+    console.log(this);
+}
+
+checkThis();    //Window 
+checkThis2();   //undefined
+
+function Product(name, price){
+    this.name = name;
+    this.price = price;
+}
+
+//new 키워드 없이 호출, this는 전역 객체인 Window 객체를 가리킨다.
+const product1 = Product('가방', 2000);
+console.log(window.name);   //가방
+console.log(window.price);  //2000
+
+//객체 내에서 정의된 함수 메소드 안에서 this를 사용하고 객체를 통해 호출하면,
+//this는 그 객체를 가리킨다.
+const product2 = {
+    name : '가방2',
+    price : 3000,
+    getVAT() {
+        return this.price / 10;
+    }
+}
+
+const valueOfProduct2 = product2.getVAT();
+console.log(valueOfProduct2);   //300
+
+//calVAT 함수를 정의 = getVAT함수와 동일하게
+const calVAT = product2.getVAT;
+const VAT2 = calVAT();  //this.price를 실행하지만 전역에서 발생
+console.log(VAT2);  //200
+
+//bind메소드를 통해 전달한 인자값으로 변경할 수 있다.
+//this외에 call과 apply메소드 또한 this가 가리키는 값을 변경할 수 있다.
+const newCalVAT = calVAT.bind(product2);    
+const VAT3 = newCalVAT();
+console.log(VAT3);  //300
+
+//Window.count로 해석되어 undefined에 1을 더하려 함
+const counter1 = {
+    count : 0,
+    addAfter1Sec() {
+        setTimeout(function(){
+            this.count += 1;
+            console.log(this.count);
+        }, 1000)
+    }
+};
+
+counter1.addAfter1Sec();    //NaN
+
+//화살표 함수에서 this를 사용하면, this는 부모환경의 this를 가리킨다.
+const counter2 = {
+    count : 0,
+    addAfter1Sec() {
+        setTimeout(() => {
+            this.count += 1 ;
+            console.log(this.count);
+        }, 1000)
+    }
+};
+
+counter2.addAfter1Sec();    //1
+```
