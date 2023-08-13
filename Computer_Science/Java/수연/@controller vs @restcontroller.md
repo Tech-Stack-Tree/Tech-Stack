@@ -33,8 +33,8 @@ public class ReftFulController{
 4. Controller는 요청을 처리한 후 View Name을 Handler Adapter한테 반환한다.  
 5. Handler Adapter는 이걸 DispatcherServlet한테 반환한다.    
 6. DispatcherServlet는 View Resolver를 통해 View Name에 해당하는 View를 찾아서 Client한테 반환한다.  
-  
 <br/>   
+  
 ✔️ **Controller가 Client 요청으로부터 Data를 반환하는 과정**  
 : @ResponseBody 사용  
 ![controller2](img/controller2.png)    
@@ -45,9 +45,9 @@ public class ReftFulController{
 3. Handler Mapping을 통해 요청을 Controller로 위임한다.   
 4. Controller는 요청을 처리한 후 객체를 반환한다.  
 5. 반환되는 객체는 JSON으로 직렬화(Serialize)돼서 Client에게 반환된다.  
-
-    
 <br/>  
+    
+  
 ### 🍭 @restcontroller  
 : @Controller와 @ResponseBody의 조합  
 - RESTful 웹 서비스를 보다 쉽게 개발할 수 있도록 Spring 4.0에서 추가됨  
@@ -85,13 +85,13 @@ public class SimpleBookRestController {
     }
 }
 ```
+<br/>    
   
-<br/>  
 ### 💥 @controller vs @restcontroller 의 차이점  
 - HTTP ResponseBody가 생성되는 방식  
 - @RestController = @Controller + @ResponseBody  
-  
 <br/>  
+  
 ### ✔️ Reference
 <https://dncjf64.tistory.com/288>
 <https://mangkyu.tistory.com/49>
