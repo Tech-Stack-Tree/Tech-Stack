@@ -212,4 +212,191 @@ hello('harin'); //hello harin
 ```
 
 
-### 6. 표준 내장 객체 이해하기
+### 6. 표준 내장 객체 이해하기  
+**표준 내장 객체(Standard Built-in Object)**  
+: 전역 스코프(scope)안에 있는 객체들을 참조  
+**내장 함수 객체(Built-in Function Object)**: 표준 내장 객체이지만, 함수처럼 호출할 수 있다.  
+-> new 지시자를 사용하여 함수 형태로 호출, 생성자(constructor)를 생성한다.  
+
+``` js
+//표준 내장객체에 new를 이용하여 생성자를 만들고 변수에 선언한다.
+const str = new String('자바스크립트');
+const num = new Number(200);
+const bool = new Boolean(true);
+const date = new Date();
+const map = new Map();
+const set = new Set();
+
+//어떤 객체는 선언없이 객체의 메소드와 속성을 바로 가져다 사용가능하다.
+console.log(Math.PI);                   //3.141592653589793
+console.log(Date.parse('2019-01-01'));  //1546300800000
+console.log(JSON.parse('{}'));          //{}
+```
+
+``` js
+//자바스크립트에서는 원시 자료형이 각 성격에 맞게 표준 내장 객체로 자동으로 매핑된다.
+//즉, 문자열로 작성된 값이 String 객체로 래핑된다는 의미
+const str1 = '자바스크립트 200제';  
+const str2 = new String('자바스크립트 200제');
+
+//typeof: 변수에 할당된 값에 대한 자료형 정보를 문자열로 반환한다.
+console.log(typeof str1);   //string
+console.log(typeof str2);   //object
+
+console.log(str1 === '자바스크립트 200제');             //true
+console.log(str2 === new String('자바스크립트 200제')); //false
+
+console.log(str1.valueOf());    //자바스크립트 200제
+console.log(str2.valueOf());    //자바스크립트 200제
+```  
+  
+#### 표준 내장 객체의 종류
+- Object: 다른 표준 내장 객체의 기본이 되는 일반 객체  
+- Number: 숫자형을 감싼 객체로, 숫자형과 관련된 함수와 속성을 갖고 있다.  
+- String: 문자형을 감싼 객체로, 문자형을 조작하거나 특정 문자열을 찾고 추출하는 등의 메소드와 속성을 활용할 수 있다.  
+- Array: 모든 배열은 Array.prototype을 상속받는다. Array 객체는 리스트처럼 배열 역할을 지니며, 배열요소를 추가/삭제하거나,  
+          배열 자체를 순회/변형하는 다양한 메소드와 속성을 지니고 있다.  
+- Math: 수리 연산을 하기 위한 속성과 메소드를 지닌 내장 객체이다. 다른 내장 객체와 달리 *Math객체는 new를 통해 인스턴스를 생성하지 않는다.*  
+        static으로 정의된 속성과 메소드를 직접 호출해야 한다.  
+- Date: 시간과 관련된 객체로, 현재 시간을 비롯하여, 국제 표준시에 따른 시간 변환 계산도 할 수 있다.  
+- JSON: JavaScript Object Notation(JSON)을 의미, 이를 다른 자료형으로 변환하거나 다시 JSON으로 변환하는 등의 메소드를 제공하고 있다.  
+- RegExp: 정규표현식은 특정 문자열 처리를 위해 사용하는 문자열 패턴 정의를 의미, 적용가능한 문자열 탐색, 비교 등의 문자열 처리메소드를 지원한다.  
+- Map: ES6부터 표준으로 추가된 Map 객체는 키 : 값 데이터 구조를 지닌 데이터 집합체(Collection)  
+    - 키의 중복성 허용x  
+    - 관련 속성, 메소드들을 가지고 있다.  
+    - Iterator를 통해 Map 데이터를 순회한다는 특징이 있다.  
+- Set: ES6 부터 표준으로 추가된 객체형, 오직 값으로 이루어진 데이터 집합체  
+    - 배열과 내부 속성, 메소드 구성이 다름  
+    - Iterator로 순회 가능  
+    - 값의 중복성을 허용하지 않는다.  
+
+
+### 7. 자료형 확인하기(typeof, instanceof)
+**typeof**: 특정 원시 자료형을 확인하거나, 원시자료형과 객체형을 구분하기 위해 활용하는 것이 좋다.  
+**instanceof**: 원시 타입을 확인하는데 적합하지x, 어떤 객체인지 구분하는데 용이하다. 
+
+``` js
+const str = 'JavaScript';
+const strObj = new String('JavaScript');
+const num = 200;
+const numObj = new Number(200);
+const bool = true;
+const boolObj = new Boolean(true);
+const func = function(){};
+const arr = [10, 200, 4000];
+const obj = {a1: 'test'};
+const empty = null;
+const notCalled = undefined;
+
+console.log(typeof str === 'string');       //true
+console.log(typeof strObj === 'object');    //true
+console.log(typeof num === 'number');       //true
+console.log(typeof numObj === 'object');    //true
+console.log(typeof bool === 'boolean');     //true
+console.log(typeof boolObj === 'object');   //true
+console.log(typeof func === 'function');    //true
+console.log(typeof arr === 'object');       //true
+console.log(typeof obj === 'object');       //true
+console.log(typeof empty === 'object');     //true
+console.log(typeof notCalled === 'undefined');  //true
+
+console.log('---------------------------');  
+console.log(str instanceof String);         //false
+console.log(strObj instanceof String);      //true
+console.log(num instanceof Number);         //false
+console.log(numObj instanceof Number);      //true
+console.log(bool instanceof Boolean);       //false
+console.log(boolObj instanceof Boolean);    //true
+console.log(func instanceof Function);      //true
+console.log(arr instanceof Array);          //true
+console.log(arr instanceof Object);         //true
+console.log(obj instanceof Object);         //true
+console.log(empty instanceof Object);       //false
+console.log(notCalled instanceof undefined);  //error!
+```
+
+
+### 8. NaN 값 확인하기(Number.isNaN)
+Number 객체의 isNaN 메소드는 NaN을 구별  
+- NaN이면 true, 아니면 false 반환  
+**NaN**: 전역 객체의 속성으로 Not a Number(숫자가 아님)의 줄임말
+  
+``` js
+console.log(Number.isNaN(NaN));             //true
+console.log(Number.isNaN(undefined));       //false
+console.log(Number.isNaN('Is it Number?')); //false
+console.log(Number.isNaN(0));               //false
+console.log(Number.isNaN(null));            //false
+
+console.log(Number.isNaN(-1));              //false  - 음수는 숫자 자료형          
+console.log(Number.isNaN(0/0));             //true - 0을 0으로 나누는 것은 정의되지 않은 의미없는 연산
+console.log(Number.isNaN(new Date()));      //false - 시간이 long 자료형으로 반환(숫자형)
+console.log(Number.isNaN(new Date().toString));//false - 문자형으로 반환
+console.log(Number.isNaN('Infinity'));      //false - 무한대(숫자형)
+```
+  
+``` js
+function verifyNumber(n){
+    if(Number.isNaN(n) || !n) return 0;
+
+    return n;
+}
+
+const num1 = verifyNumber(15);          //15
+const num2 = verifyNumber(undefined);   //0
+const num3 = verifyNumber(null);        //0
+const num4 = verifyNumber(NaN);         //0
+console.log(num1+num2+num3+num4);       //15
+```
+
+
+### 9. 정수 확인하기(isInteger)
+
+``` js
+console.log(Number.isInteger(0));           //true
+console.log(Number.isInteger(-1));          //true
+console.log(Number.isInteger(777777777777777777777777777777)); //true
+console.log(Number.isInteger(null));        //false
+console.log(Number.isInteger(0/0));         //false
+console.log(Number.isInteger('Infinity'));  //false  
+console.log(Number.isInteger(true));        //false 
+console.log(Number.isInteger({}));          //false
+```
+  
+``` js
+function verifyNumber(n){
+    if(!Number.isInteger(n)) return 0;
+
+    return n;
+}
+
+const num1 = verifyNumber(15);
+const num2 = verifyNumber(Infinity);
+const num3 = verifyNumber(0.05);
+
+console.log(num1, num2, num3);  //15 0 0
+```
+  
+
+### 10. 배열 자료형 확인하기(isArray)
+**isArray**: 배열자료형 여부를 true/false로 반환  
+  
+``` js
+function callRoll(students){
+    if(!Array.isArray(students)) return;
+
+    students.forEach((student)=> {
+        console.log(`Are you here, ${student}`);
+    });
+}
+
+const students = ['Jun', 'Ali', 'Murry', 'Toby'];
+callRoll(students);
+
+/*
+Are you here, Jun
+Are you here, Ali
+Are you here, Murry
+Are you here, Toby
+*/
+```
