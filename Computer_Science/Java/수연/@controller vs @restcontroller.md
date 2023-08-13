@@ -21,7 +21,8 @@ public class ReftFulController{
 : 전통적인 Spring MVC의 컨트롤러    
 - Client의 요청으로부터 View를 반환  
 - Model 객체를 만들어 데이터를 담고 View를 찾는 것  
-<br/>  
+<br/>
+
 ✔️ **Controller가 Client 요청으로부터 View를 반환하는 과정**  
 ![controller](img/controller.png)    
    
