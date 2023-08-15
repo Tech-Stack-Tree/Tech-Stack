@@ -5,7 +5,7 @@
 ### 🧾 동적계획법(Dynamic Programming)  
 : 하나의 문제를 단 한 번만 풀도록 하는 알고리즘  
   
-ex) 피보나치 수열  
+**ex) 피보나치 수열**  
 - 특정한 숫자를 구하기 위해 그 앞에 있는 숫자와 두 칸 앞에 있는 숫자의 합을 구해야한다.  
 - 점화식: D[i] = D[i-1] + D[i-2]  
 => 단순한 분할 정복 기법을 사용하면, 이미 해결한 문제를 다시 반복적으로 해결하여 비효율적!!💥  
@@ -70,6 +70,6 @@ public class Memoization_Fibonacci {
 ### ✅ Reference  
 <https://blog.naver.com/ndb796/221233570962>  
   
-### 문제  
+### ✏ 연습 문제  
 <https://www.acmicpc.net/workbook/view/1984>  
   
