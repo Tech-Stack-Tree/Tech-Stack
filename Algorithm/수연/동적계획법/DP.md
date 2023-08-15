@@ -1,5 +1,5 @@
 # 🔍 DP(Dynamic Programming, 동적계획법)  
-![동적계획법](../img/동적계획법.PNG)  
+  
   
   
 ### 🧾 동적계획법(Dynamic Programming)  
