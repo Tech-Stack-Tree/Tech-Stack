@@ -83,5 +83,5 @@ ex) `MongoDB`, `Redis`
 - DATA를 UPDATE하는데 비교적 느림
 
 ### Reference
-https://github.com/devSquad-study/2023-CS-Study/blob/main/DB/db_rdbms_and_nosql.md
 https://universitytomorrow.com/26
+https://github.com/devSquad-study/2023-CS-Study/blob/main/DB/db_rdbms_and_nosql.md
