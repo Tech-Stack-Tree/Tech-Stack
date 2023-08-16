@@ -81,3 +81,7 @@ ex) `MongoDB`, `Redis`
 - key값에 대한 입.출력만 지원
 - 스키마가 정해져 있지 않아 데이터에 대한 규격화가 되어있지 않음
 - DATA를 UPDATE하는데 비교적 느림
+
+### Reference
+https://github.com/devSquad-study/2023-CS-Study/blob/main/DB/db_rdbms_and_nosql.md
+https://universitytomorrow.com/26
