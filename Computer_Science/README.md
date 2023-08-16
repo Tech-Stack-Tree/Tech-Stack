@@ -26,11 +26,17 @@
   - [Application Context](../Computer_Science/Java/현보영/웹어플리케이션.md)
   - [PSA, IoC, AOP, POJO](../Computer_Science/JAVA_승현/POJO.md)
   - [Bean(Scope)](../Computer_Science/Java/현화/5주차(Bean).md)
-  - Spring Boot vs Spring
+  - [Spring Boot vs Spring](https://github.com/Tech-Stack-Tree/Tech-Stack/blob/main/Computer_Science/Java/%ED%98%84%ED%99%94/Spring%20vs%20SpringBoot.md))
   - [WEB MVC 요청 처리과정](../Computer_Science/JAVA_승현/WEB_MVC요청처리과정.md)
   - [@Controller vs @Restcontroller](../Computer_Science/Java/수연/@controller_vs_@restcontroller.md)
-  - spring security 개념, 인증처리과정,currentUser 정보
-  
+  - [spring security 개념, 인증처리과정,currentUser 정보](../Computer_Science/Java/현보영/SpringSecurity.md)
+
+### 💻 DataBase
+- Key(기본키, 후보키, 슈퍼키 등등)
+- ERD와 정규화 과정
+- RDBMS와 NoSQL
+- 인덱스
+
 ## 👩‍💼👩‍💻스터디원 소개
 
 |[![](https://github.com/BoyoungHyeon.png?width=200px)](https://github.com/BoyoungHyeon)|[![](https://github.com/suyeonChoi7807.png?width=200px)](https://github.com/suyeonChoi7807) |[![](https://github.com/kaily22.png?width=200px)](https://github.com/kaily22) | [![](https://github.com/crunky78.png?width=200px)](https://github.com/crunky78)|
