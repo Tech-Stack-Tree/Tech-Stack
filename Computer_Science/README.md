@@ -34,7 +34,7 @@
 ### 💻 DataBase
 - Key(기본키, 후보키, 슈퍼키 등등)
 - ERD와 정규화 과정
-- RDBMS와 NoSQL
+- [RDBMS와 NoSQL](../Computer_Science/JAVA_승현/RDBMS.NoSQL.md)
 - 인덱스
 
 ## 👩‍💼👩‍💻스터디원 소개
