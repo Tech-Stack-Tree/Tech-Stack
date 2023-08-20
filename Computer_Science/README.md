@@ -28,7 +28,7 @@
   - [Bean(Scope)](../Computer_Science/Java/현화/5주차(Bean).md)
   - [Spring Boot vs Spring](https://github.com/Tech-Stack-Tree/Tech-Stack/blob/main/Computer_Science/Java/%ED%98%84%ED%99%94/Spring%20vs%20SpringBoot.md)
   - [WEB MVC 요청 처리과정](../Computer_Science/JAVA_승현/WEB_MVC요청처리과정.md)
-  - [@Controller vs @Restcontroller](../Computer_Science/Java/수연/@controller_vs_@restcontroller.md)
+  - [@Controller vs @Restcontroller](../Computer_Science/Spring/수연/@controller_vs_@restcontroller.md)
   - [spring security 개념, 인증처리과정,currentUser 정보](../Computer_Science/Java/현보영/SpringSecurity.md)
 
 ### 💻 DataBase
