@@ -19,17 +19,17 @@
   - [Java8 Stream](../Computer_Science/Java/수연/자바스트림(stream).md)
   - [Collection Framework(List, Map,Set등)](../Computer_Science/JAVA_승현/Collection_Framework.md)
  ### 🍀Spring
-  - [웹 어플리케이션의 이해](../Computer_Science/Java/현보영/ApplicationContext.md)
+  - [웹 어플리케이션의 이해](../Computer_Science/Spring/보영/ApplicationContext.md)
   - [서블릿](../Computer_Science/Java/현화/4주차(서블릿).md)
-  - [JSP](../Computer_Science/JAVA_승현/JSP.md)
+  - [JSP](../Computer_Science/Spring/승현/JSP.md)
   - [MVC패턴](../Computer_Science/Spring/수연/MVC패턴.md)
-  - [Application Context](../Computer_Science/Java/현보영/웹어플리케이션.md)
-  - [PSA, IoC, AOP, POJO](../Computer_Science/JAVA_승현/POJO.md)
+  - [Application Context](../Computer_Science/Spring/보영/웹어플리케이션.md)
+  - [PSA, IoC, AOP, POJO](../Computer_Science/Spring/승현/POJO.md)
   - [Bean(Scope)](../Computer_Science/Java/현화/5주차(Bean).md)
   - [Spring Boot vs Spring](https://github.com/Tech-Stack-Tree/Tech-Stack/blob/main/Computer_Science/Java/%ED%98%84%ED%99%94/Spring%20vs%20SpringBoot.md)
-  - [WEB MVC 요청 처리과정](../Computer_Science/JAVA_승현/WEB_MVC요청처리과정.md)
+  - [WEB MVC 요청 처리과정](../Computer_Science/Spring/승현/WEB_MVC요청처리과정.md)
   - [@Controller vs @Restcontroller](../Computer_Science/Spring/수연/@controller_vs_@restcontroller.md)
-  - [spring security 개념, 인증처리과정,currentUser 정보](../Computer_Science/Java/현보영/SpringSecurity.md)
+  - [spring security 개념, 인증처리과정,currentUser 정보](../Computer_Science/Spring/보영/SpringSecurity.md)
 
 ### 💻 DataBase
 - Key(기본키, 후보키, 슈퍼키 등등)
