@@ -32,10 +32,10 @@
   - [spring security 개념, 인증처리과정,currentUser 정보](../Computer_Science/Spring/보영/SpringSecurity.md)
 
 ### 💻 DataBase
-- Key(기본키, 후보키, 슈퍼키 등등)
-- ERD와 정규화 과정
-- [RDBMS와 NoSQL](../Computer_Science/JAVA_승현/RDBMS.NoSQL.md)
-- 인덱스
+- [Key(기본키, 후보키, 슈퍼키 등등)](../Computer_Science/DB/보영/key.md)
+- [ERD와 정규화 과정](../Computer_Science/DB/수연/erd와정규화.md)
+- [RDBMS와 NoSQL](../Computer_Science/DB/승현/RDBMS.NoSQL.md)
+- [인덱스](../Computer_Science/DB/현화/인덱스.md)
 
 ## 👩‍💼👩‍💻스터디원 소개
 
