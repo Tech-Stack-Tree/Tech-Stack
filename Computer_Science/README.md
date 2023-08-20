@@ -8,8 +8,8 @@
 ## 목차
  ### ✍JAVA
   - [JVM 구조](https://github.com/Tech-Stack-Tree/Tech-Stack/blob/main/Computer_Science/Java/%ED%98%84%EB%B3%B4%EC%98%81/JVM%20%26%20%EB%A9%94%EB%AA%A8%EB%A6%AC%EA%B5%AC%EC%A1%B0.md)
-  - [Garbage collection](../Computer_Science/JAVA_승현/GC.md)
-  - [문자열 클래스](../Computer_Science/JAVA_승현/문자열클래스.md)
+  - [Garbage collection](../Computer_Science/Java/승현/GC.md)
+  - [문자열 클래스](../Computer_Science/Java/승현/문자열클래스.md)
   - [Call by Value & Call by Reference](https://github.com/Tech-Stack-Tree/Tech-Stack/blob/main/Computer_Science/JAVA_%EC%8A%B9%ED%98%84/Call%20By%20Value%20%26%20Call%20by%20Reference.md)
   - [Mutable 객체와 Immutable 객체 차이](../Computer_Science/Java/현보영/Immutable객체와mutable객체.md)
   - [제네릭](https://github.com/Tech-Stack-Tree/Tech-Stack/blob/main/Computer_Science/Java/%ED%98%84%ED%99%94/2%EC%A3%BC%EC%B0%A8.md)
@@ -17,7 +17,7 @@
   - [비동기처리 문법 비교](../Computer_Science/Java/현보영/비동기처리문법비교.md)
   - [Java Lamda Expression](../Computer_Science/Java/현화/3주차.md)
   - [Java8 Stream](../Computer_Science/Java/수연/자바스트림(stream).md)
-  - [Collection Framework(List, Map,Set등)](../Computer_Science/JAVA_승현/Collection_Framework.md)
+  - [Collection Framework(List, Map,Set등)](../Computer_Science/Java/승현/Collection_Framework.md)
  ### 🍀Spring
   - [웹 어플리케이션의 이해](../Computer_Science/Spring/보영/ApplicationContext.md)
   - [서블릿](../Computer_Science/Spring/현화/4주차(서블릿).md)
