@@ -36,6 +36,10 @@
 - [ERD와 정규화 과정](../Computer_Science/DB/수연/erd와정규화.md)
 - [RDBMS와 NoSQL](../Computer_Science/DB/승현/RDBMS.NoSQL.md)
 - [인덱스](../Computer_Science/DB/현화/인덱스.md)
+- [트랜잭션 개념과 ACID 속성]
+- [concurrency control(Serializability, Recoverable)]
+- [Isolation level(격리 수준)과 이상 현상]
+- [JOIN](../Computer_Science/DB/보영/JOIN.md)
 
 ## 👩‍💼👩‍💻스터디원 소개
 
