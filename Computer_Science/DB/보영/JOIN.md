@@ -43,7 +43,7 @@
 ```
 
 - 3. NATRUAL JOIN
-  ```sql
+ ```sql
          형식)
 
            SELECT 컬럼명, 컬럼명...
