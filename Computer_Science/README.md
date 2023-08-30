@@ -37,7 +37,7 @@
 - [RDBMS와 NoSQL](../Computer_Science/DB/승현/RDBMS.NoSQL.md)
 - [인덱스](../Computer_Science/DB/현화/인덱스.md)
 - [트랜잭션 개념과 ACID 속성](../Computer_Science/DB/승현/트랜잭션개념&ACID.md)
-- [concurrency control(Serializability, Recoverable)]
+- [concurrency control(Serializability, Recoverable)](../Computer_Science/DB/수연/concurrency.md)
 - [Isolation level(격리 수준)과 이상 현상]
 - [JOIN](../Computer_Science/DB/보영/JOIN.md)
 
